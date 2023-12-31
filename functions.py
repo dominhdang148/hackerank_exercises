@@ -169,3 +169,18 @@ def breakingRecords(scores: list) -> list:
             min_score = score
             break_min += 1
     return [break_max, break_min]
+
+
+def birthday(s: list, d, m: int) -> int:
+    count = 0
+    if len(s)<2:
+        if m==1 and d==s[0]:
+            count +=1
+        else:
+            return count
+    else:
+        for i in range(len(s)-1):
+            current_segment = s[i:i+m]
+            if sum(current_segment)==d:
+                count+=1
+    return count

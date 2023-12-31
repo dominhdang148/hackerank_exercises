@@ -1,4 +1,4 @@
 from functions import *
 
 if __name__ == "__main__":
-    print(breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]))
+    print(birthday(s=[2, 2, 1, 3, 2], d=4, m=2))
