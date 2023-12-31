@@ -154,3 +154,18 @@ def getTotalX(a, b):
         if all(i % x == 0 for x in a) and all(x % i == 0 for x in b):
             ans += 1
     return ans
+
+
+def breakingRecords(scores: list) -> list:
+    break_max = 0
+    break_min = 0
+    min_score = scores[0]
+    max_score = scores[0]
+    for score in scores:
+        if score > max_score:
+            max_score = score
+            break_max += 1
+        if score < min_score:
+            min_score = score
+            break_min += 1
+    return [break_max, break_min]
