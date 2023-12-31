@@ -1,4 +1,4 @@
 from functions import *
 
 if __name__ == "__main__":
-    print(birthday(s=[2, 2, 1, 3, 2], d=4, m=2))
+    print(divisibleSumPair(ar=[1, 3, 2, 6, 1, 2], n=6, k=3))

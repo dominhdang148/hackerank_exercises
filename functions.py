@@ -173,14 +173,24 @@ def breakingRecords(scores: list) -> list:
 
 def birthday(s: list, d, m: int) -> int:
     count = 0
-    if len(s)<2:
-        if m==1 and d==s[0]:
-            count +=1
+    if len(s) < 2:
+        if m == 1 and d == s[0]:
+            count += 1
         else:
             return count
     else:
         for i in range(len(s)-1):
             current_segment = s[i:i+m]
-            if sum(current_segment)==d:
-                count+=1
+            if sum(current_segment) == d:
+                count += 1
     return count
+
+
+def divisibleSumPair(ar: list, n, k=int) -> int:
+    satisfy_set = []
+    for i in range(n-1):
+        for j in range(i+1, n):
+            if (ar[i]+ar[j]) % k == 0:
+                satisfy_set.append((i, j))
+            print(i, j)
+    return satisfy_set.__len__()
