@@ -194,3 +194,10 @@ def divisibleSumPair(ar: list, n, k=int) -> int:
                 satisfy_set.append((i, j))
             print(i, j)
     return satisfy_set.__len__()
+
+
+def migratoryBird(arr):
+    result_dict = {}
+    for i in range(1, 6):
+        result_dict[i] = list.count(arr, i)
+    return max(result_dict, key=lambda key: result_dict[key])
