@@ -201,3 +201,16 @@ def migratoryBird(arr):
     for i in range(1, 6):
         result_dict[i] = list.count(arr, i)
     return max(result_dict, key=lambda key: result_dict[key])
+
+
+def dayOfProgrammer(year):
+    result = ""
+    if year == 1918:
+        result = f"26.09.{year}"
+    elif year < 1918 and year % 4 == 0:
+        result = f"12.09.{year}"
+    elif year > 1918 and (year % 400 == 0 or (year % 4 == 0 and year % 100 != 0)):
+        result = f"12.09.{year}"
+    else:
+        result = f"13.09.{year}"
+    return result
