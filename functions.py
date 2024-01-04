@@ -214,3 +214,9 @@ def dayOfProgrammer(year):
     else:
         result = f"13.09.{year}"
     return result
+
+
+def bonAppetit(bill: list, k, b: int):
+    bill.pop(k)
+    personal_charge = int(sum(bill)/2)
+    print("Bon Appetit" if personal_charge == b else b-personal_charge)

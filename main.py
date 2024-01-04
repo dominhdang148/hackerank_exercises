@@ -1,4 +1,4 @@
 from functions import *
 
 if __name__ == "__main__":
-    print(dayOfProgrammer(2017))
+    bonAppetit(bill=[3, 10, 9, 2], k=1, b=12)
