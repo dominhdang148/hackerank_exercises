@@ -1,4 +1,4 @@
 from functions import *
 
 if __name__ == "__main__":
-    bonAppetit(bill=[3, 10, 9, 2], k=1, b=12)
+    print(sockMerchants(n=9, arr=[10, 20, 20, 10, 10, 30, 50, 10, 20]))

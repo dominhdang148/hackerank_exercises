@@ -220,3 +220,16 @@ def bonAppetit(bill: list, k, b: int):
     bill.pop(k)
     personal_charge = int(sum(bill)/2)
     print("Bon Appetit" if personal_charge == b else b-personal_charge)
+
+
+def sockMerchants(n: int, arr: list):
+    pairCount = 0
+    count_set = set()
+    for item in arr:
+        count_set.add((item, arr.count(item)))
+    for item in count_set:
+        if item[1] % 2 == 0:
+            pairCount += item[1]/2
+        else:
+            pairCount += (item[1]-1)/2
+    return int(pairCount)
