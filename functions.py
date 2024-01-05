@@ -233,3 +233,22 @@ def sockMerchants(n: int, arr: list):
         else:
             pairCount += (item[1]-1)/2
     return int(pairCount)
+
+
+def countFlip(book: list, p: int):
+    for flip in book:
+        if p in flip:
+            return book.index(flip)
+
+
+def pageCount(n: int, p: int) -> int:
+    one_side_book = []
+    for i in range(n+1):
+        one_side_book.append(i)
+    two_side_book = [one_side_book[i:i + 2]
+                     for i in range(0, len(one_side_book), 2)]
+
+    count = countFlip(two_side_book, p)
+    two_side_book.reverse()
+    flipped_count = countFlip(two_side_book, p)
+    return min(count, flipped_count)
