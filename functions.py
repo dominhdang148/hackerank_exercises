@@ -252,3 +252,22 @@ def pageCount(n: int, p: int) -> int:
     two_side_book.reverse()
     flipped_count = countFlip(two_side_book, p)
     return min(count, flipped_count)
+
+
+def countingValleys(steps, path):
+    valley_count = 0
+    sea_level = 0
+    for step in path:
+        if step == "D":
+            sea_level -= 1
+            print(sea_level)
+        else:
+            if sea_level == -1:
+                valley_count += 1
+            sea_level += 1
+            print(sea_level)
+    return valley_count
+
+
+def getMoneySpent(keyboard, drives, b):
+    pass
