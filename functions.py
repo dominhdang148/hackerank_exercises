@@ -267,5 +267,11 @@ def countingValleys(steps, path):
     return valley_count
 
 
-def getMoneySpent(keyboard, drives, b):
-    return -1
+def getMoneySpent(keyboards: list, drives: list, b: int) -> int:
+    maxPrice = -1
+    for keyboard in keyboards:
+        for drive in drives:
+            total = keyboard+drive
+            if total <= b and total > maxPrice:
+                maxPrice = total
+    return maxPrice
