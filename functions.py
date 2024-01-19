@@ -260,14 +260,12 @@ def countingValleys(steps, path):
     for step in path:
         if step == "D":
             sea_level -= 1
-            print(sea_level)
         else:
             if sea_level == -1:
                 valley_count += 1
             sea_level += 1
-            print(sea_level)
     return valley_count
 
 
 def getMoneySpent(keyboard, drives, b):
-    pass
+    return -1
