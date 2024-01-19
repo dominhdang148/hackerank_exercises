@@ -275,3 +275,14 @@ def getMoneySpent(keyboards: list, drives: list, b: int) -> int:
             if total <= b and total > maxPrice:
                 maxPrice = total
     return maxPrice
+
+
+def catAndMouse(x: int, y: int, z: int) -> str:
+    gapA = abs(x-z)
+    gapB = abs(y-z)
+    if gapA == gapB:
+        return "Mouse C"
+    elif gapA > gapB:
+        return "Cat B"
+    else:
+        return "Cat A"
